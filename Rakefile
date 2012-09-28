@@ -16,6 +16,8 @@ Bones {
   email  'thopre@gmail.com'
   url  'http://roo.rubyforge.org/'
   version  Roo::VERSION
+  depend_on 'shoulda', :development => true
+  depend_on 'google_drive', '~>0.3.1'
   depend_on 'spreadsheet', '> 0.6.4'
   #--
   # rel. 0.6.4 causes an invalid Date error if we

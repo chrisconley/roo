@@ -1,4 +1,5 @@
-require "google_spreadsheet"
+require "google_drive"
+GoogleSpreadsheet = GoogleDrive
 
 class GoogleHTTPError < RuntimeError; end
 class GoogleReadError < RuntimeError; end

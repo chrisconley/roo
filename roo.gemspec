@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thomas Preymesser", "Hugh McGowan", "Ben Woosley"]
-  s.date = "2012-09-09"
+  s.date = "2012-09-28"
   s.description = "Roo can access the contents of various spreadsheet files. It can handle\n* Openoffice\n* Excel\n* Google spreadsheets\n* Excelx\n* Libreoffice\n* CSV"
   s.email = "thopre@gmail.com"
   s.executables = ["roo"]
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--main", "README.txt"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "roo"
-  s.rubygems_version = "1.8.23"
+  s.rubygems_version = "1.8.24"
   s.summary = "Roo can access the contents of various spreadsheet files."
   s.test_files = ["test/test_generic_spreadsheet.rb", "test/test_helper.rb", "test/test_roo.rb"]
 
@@ -24,20 +24,26 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<google_drive>, ["~> 0.3.1"])
       s.add_runtime_dependency(%q<spreadsheet>, ["> 0.6.4"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 1.5.5"])
       s.add_runtime_dependency(%q<rubyzip>, [">= 0.9.9"])
+      s.add_development_dependency(%q<shoulda>, [">= 3.1.1"])
       s.add_development_dependency(%q<bones>, [">= 3.8.0"])
     else
+      s.add_dependency(%q<google_drive>, ["~> 0.3.1"])
       s.add_dependency(%q<spreadsheet>, ["> 0.6.4"])
       s.add_dependency(%q<nokogiri>, [">= 1.5.5"])
       s.add_dependency(%q<rubyzip>, [">= 0.9.9"])
+      s.add_dependency(%q<shoulda>, [">= 3.1.1"])
       s.add_dependency(%q<bones>, [">= 3.8.0"])
     end
   else
+    s.add_dependency(%q<google_drive>, ["~> 0.3.1"])
     s.add_dependency(%q<spreadsheet>, ["> 0.6.4"])
     s.add_dependency(%q<nokogiri>, [">= 1.5.5"])
     s.add_dependency(%q<rubyzip>, [">= 0.9.9"])
+    s.add_dependency(%q<shoulda>, [">= 3.1.1"])
     s.add_dependency(%q<bones>, [">= 3.8.0"])
   end
 end
