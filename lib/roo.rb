@@ -31,6 +31,8 @@ module Roo
   autoload :Excel,              'roo/excel'
   autoload :Excelx,             'roo/excelx'
   # autoload :Google,             'roo/google'
+  class Roo::Google < Roo::GenericSpreadsheet
+  end
   autoload :Csv,                'roo/csv'
 
   autoload :Excel2003XML,       'roo/excel2003xml'
