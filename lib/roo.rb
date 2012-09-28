@@ -30,7 +30,7 @@ module Roo
   autoload :Openoffice,         'roo/openoffice'
   autoload :Excel,              'roo/excel'
   autoload :Excelx,             'roo/excelx'
-  autoload :Google,             'roo/google'
+  # autoload :Google,             'roo/google'
   autoload :Csv,                'roo/csv'
 
   autoload :Excel2003XML,       'roo/excel2003xml'
