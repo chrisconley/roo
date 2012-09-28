@@ -15,8 +15,6 @@ module Roo
           Roo::Openoffice.new(file)
         when '.xml'
           Roo::Excel2003XML.new(file)
-        when ''
-          Roo::Google.new(file)
         when '.csv'
           Roo::Csv.new(file)
         else
@@ -30,9 +28,6 @@ module Roo
   autoload :Openoffice,         'roo/openoffice'
   autoload :Excel,              'roo/excel'
   autoload :Excelx,             'roo/excelx'
-  # autoload :Google,             'roo/google'
-  class Roo::Google < Roo::GenericSpreadsheet
-  end
   autoload :Csv,                'roo/csv'
 
   autoload :Excel2003XML,       'roo/excel2003xml'
