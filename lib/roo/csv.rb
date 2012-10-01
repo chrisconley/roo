@@ -18,6 +18,7 @@ class Roo::Csv < Roo::GenericSpreadsheet
     @last_row = Hash.new
     @first_column = Hash.new
     @last_column = Hash.new
+    @header_line = 1
   end
 
   # Returns an array with the names of the sheets. In Csv class there is only
