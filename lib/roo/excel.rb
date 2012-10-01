@@ -61,7 +61,7 @@ class Roo::Excel < Roo::GenericSpreadsheet
     row,col = normalize(row,col)
     if celltype(row,col,sheet) == :date
       yyyy,mm,dd = @cell[sheet][[row,col]].split('-')
-      return Date.new(yyyy.to_i,mm.to_i,dd.to_i)
+      return DateTime.new(yyyy.to_i,mm.to_i,dd.to_i)
     end
     if celltype(row,col,sheet) == :string
       return platform_specific_iconv(@cell[sheet][[row,col]])

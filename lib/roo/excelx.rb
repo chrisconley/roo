@@ -165,7 +165,7 @@ class Roo::Excelx < Roo::GenericSpreadsheet
     row,col = normalize(row,col)
     if celltype(row,col,sheet) == :date
       yyyy,mm,dd = @cell[sheet][[row,col]].split('-')
-      return Date.new(yyyy.to_i,mm.to_i,dd.to_i)
+      return DateTime.new(yyyy.to_i,mm.to_i,dd.to_i)
     elsif celltype(row,col,sheet) == :datetime
       date_part,time_part = @cell[sheet][[row,col]].split(' ')
       yyyy,mm,dd = date_part.split('-')
@@ -383,7 +383,7 @@ class Roo::Excelx < Roo::GenericSpreadsheet
       when :string
         v
       when :date
-        (Date.new(1899,12,30)+v.to_i).strftime("%Y-%m-%d")
+        (DateTime.new(1899,12,30)+v.to_f).strftime("%Y-%m-%d")
       when :datetime
         (DateTime.new(1899,12,30)+v.to_f).strftime("%Y-%m-%d %H:%M:%S")
       when :percentage

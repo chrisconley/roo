@@ -50,7 +50,7 @@ class Roo::Csv < Roo::GenericSpreadsheet
   TYPE_MAP = {
     String => :string,
     Float => :float,
-    Date => :date,
+    Date => :datetime,
     DateTime => :datetime,
   }
 
